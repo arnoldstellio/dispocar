@@ -5,6 +5,8 @@
 class ClientvosController extends AppController {
 
 	var $name = 'Clientvos';
+	var $helpers = array('Ck');
+
 
 	
 /****************************************************************************************** fonctions membres****/

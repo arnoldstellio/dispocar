@@ -1,4 +1,13 @@
 ﻿<div class="clientvos form">
+
+<?php
+$this->set('title_for_layout', "Ajouter un article");
+ 
+// Appel des fichiers javascript nécessaires
+       echo $this->Html->script('ckeditor/ckeditor', array('inline' => false));
+       echo $this->Html->script('ckfinder/ckfinder', array('inline' => false));
+?>
+
 <?php echo $this->Form->create('Clientvo');?>
 	<fieldset>
 		<legend><?php __('Nouveau client'); ?></legend>
@@ -10,8 +19,10 @@
 		echo $this->Form->input('tel');
 		echo $this->Form->input('ovehicules_id', array('label'=>'Id du véhicule'));
 		echo $this->Form->input('nego', array('label'=>'Négociations clôturées '));
-		echo $this->Form->input('note', array('label'=>'Commentaire'));
-
+        
+		echo "Commentaires possibles";
+		echo $this->Form->textarea('note');
+		echo $this->Ck->replace('note');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Enregistrer', true));?>

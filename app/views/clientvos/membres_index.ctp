@@ -9,6 +9,7 @@
 			<th><?php echo $this->Paginator->sort('ville');?></th>
 			<th><?php echo $this->Paginator->sort('tel');?></th>
 			<th><?php echo $this->Paginator->sort('Négociations');?></th>
+			<th><?php echo $this->Paginator->sort('Véhicule');?></th>
 			<th class="actions"><?php __('Actions');?></th>
 	</tr>
 	<?php
@@ -27,6 +28,9 @@
 		<td><?php echo $clientvo['Clientvo']['ville']; ?>&nbsp;</td>
 		<td><?php echo $clientvo['Clientvo']['tel']; ?>&nbsp;</td>
 	    <td><?php echo $clientvo['Clientvo']['nego']=='0'?'En cours':'clôturées'; ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($clientvo['Ovehicule']['id'], array('controller' => 'Ovehicules', 'action' => 'view', $clientvo['Ovehicule']['id'])); ?>
+		</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('Voir', true), array('action' => 'view', $clientvo['Clientvo']['id'])); ?>
 			<?php echo $this->Html->link(__('Editer', true), array('action' => 'edit', $clientvo['Clientvo']['id'])); ?>

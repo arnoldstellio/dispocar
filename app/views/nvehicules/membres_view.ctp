@@ -36,11 +36,7 @@
 			<?php echo $nvehicule['Nvehicule']['finission']; ?>
 			&nbsp;
 		</dd>
-		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Commentaire'); ?></dt>
-		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $nvehicule['Nvehicule']['commentaire']; ?>
-			&nbsp;
-		</dd>
+		
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __(''); ?></dt>
 		
 		
@@ -71,6 +67,19 @@
 			<?php echo $this->Html->link($nvehicule['Parc']['id'], array('controller' => 'parcs', 'action' => 'view', $nvehicule['Parc']['id'])); ?>
 			&nbsp;
 		</dd>
+		
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Commentaire'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<?php echo $nvehicule['Nvehicule']['commentaire']; ?>
+			&nbsp;
+		</dd>
+		
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Informations supplémentaires'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<?php echo $nvehicule['Nvehicule']['infoptions']; ?>
+			&nbsp;
+		</dd>
+		
 		
 		<h3>Les différents statuts </h3>
 		

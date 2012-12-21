@@ -4,6 +4,7 @@
 class OvehiculesController extends AppController {
 
 	var $name = 'Ovehicules';
+	var $helpers = array('Ck');
 
 	function membres_index() {
 		$this->Ovehicule->recursive = 0;

@@ -37,6 +37,12 @@
 		<td> <?php echo $client['Client']['nego']=='0'?'En cours':'clôturées'; ?>&nbsp;</td>
 		</dd>
 		
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Id véhicule neuf'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<?php echo $this->Html->link($client['Nvehicule']['id'], array('controller' => 'Nvehicule', 'action' => 'view', $client['Nvehicule']['id'])); ?>
+			&nbsp;
+		</dd>
+		
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Commentaire'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
 			<?php echo $client['Client']['note']; ?>

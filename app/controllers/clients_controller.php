@@ -5,6 +5,8 @@
 class ClientsController extends AppController {
 
 	var $name = 'Clients';
+    var $helpers = array('Ck');
+
 
 	
 /****************************************************************************************** fonctions membres****/

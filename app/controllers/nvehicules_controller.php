@@ -2,6 +2,8 @@
 class NvehiculesController extends AppController {
 
 	var $name = 'Nvehicules';
+	var $helpers = array('Ck');
+
 /************************************************************************ fonctions admin****/
 
 	function admin_index() {

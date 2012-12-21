@@ -32,10 +32,22 @@
 			<?php echo $clientvo['Clientvo']['tel']; ?>
 			&nbsp;
 		</dd>
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Id véhicule'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<?php echo $this->Html->link($clientvo['Ovehicule']['id'], array('controller' => 'Ovehicule', 'action' => 'view', $clientvo['Ovehicule']['id'])); ?>
+			&nbsp;
+		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Négociations '); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
 		<td> <?php echo $clientvo['Clientvo']['nego']=='0'?'En cours':'clôturées'; ?>&nbsp;</td>
 		</dd>
+		
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Commentaires'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<?php echo $clientvo['Clientvo']['note']; ?>
+			&nbsp;
+		</dd>
+		
 	</dl>
 </div>
 <div class="actions">

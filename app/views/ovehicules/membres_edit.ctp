@@ -1,4 +1,13 @@
 ﻿<div class="ovehicules form">
+
+<?php
+$this->set('title_for_layout', "Ajouter un article");
+ 
+// Appel des fichiers javascript nécessaires
+echo $this->Html->script('ckeditor/ckeditor', array('inline' => false));
+echo $this->Html->script('ckfinder/ckfinder', array('inline' => false));
+?>
+
 <?php echo $this->Form->create('Ovehicule');?>
 	<fieldset>
 		<legend><?php __('Editer'); ?></legend>
@@ -11,7 +20,15 @@
 		echo $this->Form->input('puissance');
 		echo $this->Form->input('couleur');
 		echo $this->Form->input('finission');
-		echo $this->Form->input('commentaire');
+		
+        echo "Options supplémentaires";
+		echo $this->Form->textarea('infoptions');
+		echo $this->Ck->replace('infoptions');
+
+		echo "Commentaires possibles";
+		echo $this->Form->textarea('commentaire');
+		echo $this->Ck->replace('commentaire');
+		
 		echo $this->Form->input('prix');
 		echo $this->Form->input('boite');
 		echo $this->Form->input('motorisation');
