@@ -1,7 +1,7 @@
 <?php
 class AppController extends Controller
 {
-	var $components = array('AppAuth','Session');
+	var $components = array('AppAuth','Session','Email');
 }
 
 

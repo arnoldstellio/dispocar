@@ -28,6 +28,7 @@ echo $this->Html->script('ckfinder/ckfinder', array('inline' => false));
 		echo $this->Form->input('kilometrage');
 		
 		echo "Options supplémentaires";
+		'&nbsp';
 		echo $this->Form->textarea('infoptions');
 		echo $this->Ck->replace('infoptions');
 		

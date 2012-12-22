@@ -165,3 +165,8 @@
 2012-12-19 17:58:37 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [C:\wamp\www\dispocar\cake\libs\view\helpers\form.php, line 555]
 2012-12-19 17:58:37 Warning: Warning (2): array_pop() expects parameter 1 to be array, null given in [C:\wamp\www\dispocar\cake\libs\view\helpers\form.php, line 555]
 2012-12-19 17:58:37 Warning: Warning (2): implode() [<a href='http://php.net/function.implode'>function.implode</a>]: Invalid arguments passed in [C:\wamp\www\dispocar\cake\libs\view\helper.php, line 662]
+2012-12-22 12:44:14 Warning: Warning (2): mysql_connect() [<a href='http://php.net/function.mysql-connect'>function.mysql-connect</a>]: [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+ (trying to connect via tcp://localhost:3306) in [C:\wamp\www\dispocar\cake\libs\model\datasources\dbo\dbo_mysql.php, line 561]
+2012-12-22 12:44:14 Warning: Warning (2): mysql_connect() [<a href='http://php.net/function.mysql-connect'>function.mysql-connect</a>]: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+ in [C:\wamp\www\dispocar\cake\libs\model\datasources\dbo\dbo_mysql.php, line 561]
+2012-12-22 12:44:14 Warning: Warning (2): mysql_query() expects parameter 2 to be resource, boolean given in [C:\wamp\www\dispocar\cake\libs\model\datasources\dbo\dbo_mysql.php, line 613]

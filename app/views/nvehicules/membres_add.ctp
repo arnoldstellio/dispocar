@@ -3,12 +3,19 @@
 <?php
 $this->set('title_for_layout', "Ajouter un article");
  
-// Appel des fichiers javascript nécessaires
+// Appel des fichiers javascript nécessaires pour éditeur de texte
 echo $this->Html->script('ckeditor/ckeditor', array('inline' => false));
 echo $this->Html->script('ckfinder/ckfinder', array('inline' => false));
 ?>
 
+
+
+	
+	
+
 	<?php echo $form->create('Nvehicule',array('type' => 'file'));?>
+	
+
 	<fieldset>
 		<legend><?php __('Nouveau véhicule'); ?></legend>
 	<?php
@@ -22,7 +29,11 @@ echo $this->Html->script('ckfinder/ckfinder', array('inline' => false));
 		echo $this->Form->input('prix');
 		echo $this->Form->input('boite');
 		echo $this->Form->input('motorisation');
-        
+       ?>
+	</fieldset>
+	   
+	<fieldset>
+     <?php
 		echo "Options supplémentaires";
 		echo $this->Form->textarea('infoptions');
 		echo $this->Ck->replace('infoptions');
@@ -30,16 +41,23 @@ echo $this->Html->script('ckfinder/ckfinder', array('inline' => false));
 		echo "Commentaires possibles";
 		echo $this->Form->textarea('commentaire');
 		echo $this->Ck->replace('commentaire');
-		
+	 ?>
+	</fieldset>
+
+   <fieldset>
+   <?php
 		echo $form->input('filename', array('type' => 'file','label'=>'Inclure une image'));
 		echo $this->Form->input('envente', array('label'=>'Hors vente '));
 		echo $this->Form->input('entransfert', array('label'=>'En transfert '));
 		echo $this->Form->input('vendu', array('label'=>'Vente close '));
-
-	?>
-
+    ?>
 	</fieldset>
+		
+
+
+
 <?php echo $this->Form->end(__('Enregistrer', true));?>
+
 </div>
 <div class="actions">
 	<h3><?php __('Actions'); ?></h3>
